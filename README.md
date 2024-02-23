@@ -4,7 +4,6 @@ ________________________________________________________________
 ________________________________________________________________
 
 
-
 a game of discovery, a furious journey of self
 
-and fists
+and fists, a <i>family</i> of fists 
