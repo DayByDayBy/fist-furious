@@ -2000,7 +2000,13 @@ MonoBehaviour:
   gestureScript: {fileID: 558948774}
   baseObj: {fileID: 0}
   textObj: {fileID: 0}
-  walls: []
+  walls:
+  - {fileID: 834208272895183060, guid: 4457502d7694a314aacf94e6a82d4746, type: 3}
+  - {fileID: 3435730718791746647, guid: f37479dae721d17498dc4d110d5d6742, type: 3}
+  - {fileID: 7031170408389483379, guid: 1fa4ae684ca73e34cbfe2f6fbe68b8e8, type: 3}
+  spawnPos: {fileID: 0}
+  timer1Length: 3
+  timer2Length: 5
 --- !u!1 &585137104
 GameObject:
   m_ObjectHideFlags: 0
