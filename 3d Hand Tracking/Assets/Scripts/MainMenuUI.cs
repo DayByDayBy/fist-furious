@@ -83,7 +83,7 @@ public class MainMenuUI : MonoBehaviour
         if (timer > timerLength)
         {
             print("LEVEL "+ fingers.ToString() + " NAV SUCCESS");
-            //SceneManager.LoadScene(fingers);
+            SceneManager.LoadScene(fingers);
         }
     }
     
