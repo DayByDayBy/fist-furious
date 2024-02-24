@@ -1,3 +1,5 @@
 
 3d Hand Tracking/.vs/3d Hand Tracking/v15/Server/sqlite3/storage.ide
 3d Hand Tracking/.vs/3d Hand Tracking/v15/Server/sqlite3/storage.ide-wal
+*.ide-wal
+3d Hand Tracking/.vs/3d Hand Tracking/v15/Server/sqlite3/storage.ide-wal

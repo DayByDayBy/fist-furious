@@ -24,6 +24,8 @@ public class RamenLevel : MonoBehaviour
     bool wallActive = false;
     int whatToSpawn; // 0 spawns rock, 1 scissors, 2 paper
 
+    public ParticleSystem[] particlesForPoints;
+
     //bool correctPose = false;
 
     //on attack, get hand pose and win or lose
@@ -42,6 +44,15 @@ public class RamenLevel : MonoBehaviour
         SpawnWall();
         WallAttack(handPose);
 
+    }
+
+    void SetAllParticlesColour(Color colorInput)
+    {
+        foreach (ParticleSystem ps in particlesForPoints)
+        {
+            var main = ps.main;
+            //main.col = colorInput;
+        }
     }
 
     void SpawnWall()
