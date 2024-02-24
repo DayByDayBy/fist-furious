@@ -6,10 +6,10 @@ public class GestureScript : MonoBehaviour
 {    
     //mimnimum tolerance angles for each finger
     float thumbThresh = 20.0f;
-    float indexThresh = 10.0f;
-    float middleThresh = 10.0f;
-    float ringThresh = 10.0f;
-    float littleThresh = 15.0f;
+    float indexThresh = 15.0f;
+    float middleThresh = 15.0f;
+    float ringThresh = 20.0f;
+    float littleThresh = 20.0f;
 
     [SerializeField]
     Transform little1, little2, little3, little4;
@@ -22,8 +22,8 @@ public class GestureScript : MonoBehaviour
     [SerializeField]
     Transform thumb1, thumb2, thumb3;
 
-    [SerializeField]
-    public static bool thumbStraight, indexStraight, middleStraight, ringStraight, littleStraight;
+    //[SerializeField]
+    public bool thumbStraight, indexStraight, middleStraight, ringStraight, littleStraight;
     
 
     // Start is called before the first frame update

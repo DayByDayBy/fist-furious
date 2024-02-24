@@ -1947,7 +1947,7 @@ MonoBehaviour:
   - {fileID: 2054230235}
   - {fileID: 983029973}
   - {fileID: 825424039}
-  xOffset: 0
+  xOffset: 2
   yOffset: 0
 --- !u!114 &558948774
 MonoBehaviour:
@@ -1980,6 +1980,11 @@ MonoBehaviour:
   thumb1: {fileID: 128887489}
   thumb2: {fileID: 1184177663}
   thumb3: {fileID: 1983476864}
+  thumbStraight: 0
+  indexStraight: 0
+  middleStraight: 0
+  ringStraight: 0
+  littleStraight: 0
 --- !u!114 &558948775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1992,8 +1997,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91d32a849b55bfa43b91870bd221c5ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gestureScript: {fileID: 558948774}
   mainDisplay: {fileID: 1410047535}
-  timerLength: 0
+  timerLength: 5
 --- !u!1 &585137104
 GameObject:
   m_ObjectHideFlags: 0

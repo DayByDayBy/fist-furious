@@ -6,8 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuUI : MonoBehaviour
 {
+
+    public GestureScript gestureScript;
+
     [SerializeField]
     GameObject mainDisplay;
+    TextMeshProUGUI text; 
 
     int howManyFingers = 0;
 
@@ -18,7 +22,8 @@ public class MainMenuUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        mainDisplay.SetActive(false);
+        text = mainDisplay.GetComponentInChildren<TextMeshProUGUI>();
     }
 
     // Update is called once per frame
@@ -26,86 +31,60 @@ public class MainMenuUI : MonoBehaviour
     {
         howManyFingers = 0;
 
-        if (GestureScript.thumbStraight) howManyFingers++;
-        if (GestureScript.indexStraight) howManyFingers++;
-        if (GestureScript.middleStraight) howManyFingers++;
-        if (GestureScript.ringStraight) howManyFingers++;
-        if (GestureScript.littleStraight) howManyFingers++;
+        if (gestureScript.thumbStraight) howManyFingers++;
+        if (gestureScript.indexStraight) howManyFingers++;
+        if (gestureScript.middleStraight) howManyFingers++;
+        if (gestureScript.ringStraight) howManyFingers++;
+        if (gestureScript.littleStraight) howManyFingers++;
 
         switch (howManyFingers)
         {
+            case 0:
+                timer = 0;
+                mainDisplay.SetActive(false);
+                break;
             case 1:
-                OneFinger();
+                FingerNavigate(1);
+                //
                 break;
             case 2:
-                TwoFinger();
+                FingerNavigate(2);
+                //
                 break;
             case 3:
-                ThreeFinger();
+                FingerNavigate(3);
+                //
                 break;
             case 4:
-                FourFinger();
+                FingerNavigate(4);
+                //
                 break;
             case 5:
-                FiveFinger();
+                FingerNavigate(5);
+                //
                 break;
 
         }
+        print(howManyFingers);
 
-        mainDisplay.SetActive(false);
-        timer = 0.0f;
-
-    }
-
-    void OneFinger()
-    {
-        while (howManyFingers == 1)
-        {
-            timer += Time.fixedDeltaTime;
-            mainDisplay.SetActive(true);
-            if (timer > timerLength)
-            {
-                SceneManager.LoadScene(1);
-            }
-        }
-    }
-
-    void TwoFinger()
-    {
-        while (howManyFingers == 2)
-        {
-            
-        }
         
+        //timer = 0.0f;
+
     }
 
-    void ThreeFinger()
+    void FingerNavigate(int fingers)
     {
-        while (howManyFingers == 3)
+        timer += Time.fixedDeltaTime;
+        mainDisplay.SetActive(true);
+        text.text = ("Navigating to Level " + fingers.ToString());
+
+        //print(timer);
+
+        if (timer > timerLength)
         {
-
+            print("LEVEL "+ fingers.ToString() + " NAV SUCCESS");
+            //SceneManager.LoadScene(fingers);
         }
-
     }
-
-    void FourFinger()
-    {
-        while (howManyFingers == 4)
-        {
-
-        }
-
-    }
-
-    void FiveFinger()
-    {
-        while (howManyFingers == 5)
-        {
-
-        }
-
-    }
-
-
-
+    
 }

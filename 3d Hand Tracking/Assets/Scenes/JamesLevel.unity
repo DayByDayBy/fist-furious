@@ -1894,10 +1894,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 841b3d501c1a14148b422a16e2dba843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  little1: {fileID: 825424040}
-  little2: {fileID: 983029974}
-  little3: {fileID: 2054230236}
-  little4: {fileID: 1235386233}
+  little1: {fileID: 1235386233}
+  little2: {fileID: 2054230236}
+  little3: {fileID: 983029974}
+  little4: {fileID: 825424040}
   ring1: {fileID: 1431342906}
   ring2: {fileID: 280098122}
   ring3: {fileID: 1258528017}
@@ -1913,11 +1913,6 @@ MonoBehaviour:
   thumb1: {fileID: 128887489}
   thumb2: {fileID: 1184177663}
   thumb3: {fileID: 1983476864}
-  thumbStraight: 0
-  indexStraight: 0
-  middleStraight: 0
-  ringStraight: 0
-  littleStraight: 0
 --- !u!1 &585137104
 GameObject:
   m_ObjectHideFlags: 0

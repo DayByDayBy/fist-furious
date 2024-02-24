@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/RamenLevel.unity
     guid: e21ce2a07c622a54c88638aeea408375
+  - enabled: 1
+    path: Assets/Scenes/NoellaLevel.unity
+    guid: 8c79c9eb218235045aec9c2d38cd84f4
+  - enabled: 1
+    path: Assets/Scenes/JamesLevel.unity
+    guid: 9a2d93fe19cc26642bf33c91e2745d51
   m_configObjects: {}
