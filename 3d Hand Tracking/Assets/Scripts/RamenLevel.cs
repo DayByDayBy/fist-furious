@@ -12,8 +12,6 @@ public class RamenLevel : MonoBehaviour
     [SerializeField]
     GameObject[] walls;
     GameObject currentWall = null;
-    [SerializeField]
-    Transform spawnPos;
 
     float timer1 = 0.0f;
     float timer2 = 0.0f;
@@ -24,8 +22,9 @@ public class RamenLevel : MonoBehaviour
     float timer2Length;
 
     bool wallActive = false;
-
     int whatToSpawn; // 0 spawns rock, 1 scissors, 2 paper
+
+    //bool correctPose = false;
 
     //on attack, get hand pose and win or lose
     //Rock == default
@@ -47,7 +46,6 @@ public class RamenLevel : MonoBehaviour
 
     void SpawnWall()
     {
-        
 
         timer1 += Time.fixedDeltaTime;
         if (!wallActive && timer1 > timer1Length)
@@ -56,7 +54,7 @@ public class RamenLevel : MonoBehaviour
             whatToSpawn = Random.Range(0, 3);
 
             print(whatToSpawn);
-            currentWall = Instantiate(walls[whatToSpawn], new Vector3(0, 0, 0), Quaternion.identity);            
+            currentWall = Instantiate(walls[whatToSpawn], new Vector3(0, 0, 5), Quaternion.identity);            
 
         }
     }
@@ -66,7 +64,7 @@ public class RamenLevel : MonoBehaviour
         
         if (gestureScript.indexStraight && gestureScript.middleStraight)
         {
-            if (gestureScript.ringStraight && gestureScript.littleStraight)
+            if (gestureScript.ringStraight)
             {
                 return 2; // paper
             }
@@ -78,15 +76,34 @@ public class RamenLevel : MonoBehaviour
 
     }
 
+    bool IsCorrectPose(int currPose, int wall)
+    {
+        bool correctPose = false;
+
+        if (currPose == 0 && wall == 1)
+        {
+            correctPose = true;
+        } else if(currPose == 1 && wall == 2)
+        {
+            correctPose = true;
+        } else if(currPose == 2 && wall == 0)
+        {
+            correctPose = true;
+        }
+
+        return correctPose;
+    }
+
     void WallAttack(int pose)
     {
         if (wallActive)
         {
+
             timer2 += Time.fixedDeltaTime;
             if (timer2 > timer2Length)
             {
                 //second timer for how long until it attacks, display on the text object
-                if (pose == whatToSpawn || Input.GetKey(KeyCode.A))  
+                if (IsCorrectPose(pose, whatToSpawn) || Input.GetKey(KeyCode.A))  //keyboard a for testing 
                 {
                     timer1 = 0;
                     timer2 = 0;
@@ -98,11 +115,7 @@ public class RamenLevel : MonoBehaviour
                 else
                 {
                     SceneManager.LoadScene(0);//else fail, load main scene
-                }
-                
-
-
-                    
+                }                                
             }
 
             /*if (pose == whatToSpawn) { }
