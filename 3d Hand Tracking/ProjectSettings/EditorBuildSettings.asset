@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/JamesLevel.unity
     guid: 9a2d93fe19cc26642bf33c91e2745d51
+  - enabled: 1
+    path: Assets/Scenes/ChloeLevel.unity
+    guid: f44a5c77c8938924f93b755c04e54a88
+  - enabled: 1
+    path: Assets/Scenes/RossLevel.unity
+    guid: 817fbfdc93353174da08ab40b98f39d1
   m_configObjects: {}

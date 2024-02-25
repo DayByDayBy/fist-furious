@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/ChloeLevel.unity
+- path: Assets/Scenes/RossLevel.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
