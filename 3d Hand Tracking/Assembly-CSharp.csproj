@@ -56,6 +56,7 @@
     <Compile Include="Assets\Scripts\GestureScript.cs" />
     <Compile Include="Assets\Scripts\ChloeHandGrabber.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
+    <Compile Include="Assets\Scripts\JamesLevelScript.cs" />
     <Compile Include="Assets\Scripts\LineScript.cs" />
     <Compile Include="Assets\Scripts\UDPReceive.cs" />
     <Compile Include="Assets\Scripts\NoellaLevelScript.cs" />
@@ -83,6 +84,7 @@
     <Compile Include="Assets\Scripts\MoveEnvironment.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
+    <Compile Include="Assets\Scripts\JamesKey.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
@@ -97,8 +99,9 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
-    <Compile Include="Assets\Scripts\JamesKey.cs" />
-    <Compile Include="Assets\Scripts\JamesLevelScript.cs" />
+    <Compile Include="Assets\Scripts\RossColliderWin.cs" />
+    <Compile Include="Assets\Scripts\RossScript.cs" />
+    <Compile Include="Assets\Scripts\RossColliderScript.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

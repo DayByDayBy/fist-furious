@@ -7,6 +7,7 @@ TagManager:
   - Crane Object
   - Duck
   - Finger Tip
+  - Ball
   layers:
   - Default
   - TransparentFX

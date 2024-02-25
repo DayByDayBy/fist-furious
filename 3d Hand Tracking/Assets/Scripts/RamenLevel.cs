@@ -35,7 +35,7 @@ public class RamenLevel : MonoBehaviour
 
     void Start()
     {
-        
+        SetAllParticlesColour(Color.green);
     }
 
     void FixedUpdate()
@@ -51,7 +51,7 @@ public class RamenLevel : MonoBehaviour
         foreach (ParticleSystem ps in particlesForPoints)
         {
             var main = ps.main;
-            //main.col = colorInput;
+            main.startColor = colorInput;
         }
     }
 
